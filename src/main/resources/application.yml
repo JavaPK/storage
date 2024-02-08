@@ -1,0 +1,18 @@
+server:
+  port: 9001
+
+spring:
+  data:
+    mongodb:
+      username: root
+      password: example
+      host: localhost
+      port: 27017
+      database: db
+      authentication-database: admin
+
+
+
+storage:
+  directory: C:\\Users\\Filip-Laptop\\Desktop\\Projekt office\\storage-files
+  encrypted: false
