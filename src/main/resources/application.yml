@@ -1,18 +1,20 @@
 server:
   port: 9001
 
-spring:
-  data:
-    mongodb:
-      username: root
-      password: example
-      host: localhost
-      port: 27017
-      database: db
-      authentication-database: admin
-
-
+logging:
+  level:
+    pl.office.storage: DEBUG
 
 storage:
-  directory: C:\\Users\\Filip-Laptop\\Desktop\\Projekt office\\storage-files
+  directory: C:\upload
   encrypted: false
+  id: 1
+  instance-type: MAIN
+  server-host: localhost
+  server-port: ${server.port}
+
+storage-manager:
+  url: http://localhost:9002
+  register: /api/storage/register
+  register-rate: 10000
+
