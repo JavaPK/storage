@@ -6,6 +6,8 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.UUID;
 
+import jakarta.servlet.http.HttpServletRequest;
+
 public interface FileService {
-    UUID upload(MultipartFile file, String metadata) throws IOException;
+    UUID upload(HttpServletRequest request) throws IOException;
 }
